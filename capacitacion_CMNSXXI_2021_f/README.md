@@ -4,12 +4,16 @@ You can use the [editor on GitHub](https://github.com/rgalindosbd/rgalindosbd.gi
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
+
+for i in $(ls /home/labseq/SolariaBiodata/testing/reads202012/); do ln -s /home/labseq/SolariaBiodata/testing/reads202012/$i $i; done
+for i in $(ls | cut -d "_" -f-2 | uniq); do mkdir $i; mv ${i}*gz $i; done
+
+
+
+./filtradorLecturas_mismaMuestra.sh /home/umaelab/SolariaBiodata/testing/input/ /home/umaelab/SolariaBiodata/testing/t_out/ 12 30 50
 
 # Header 1
 ## Header 2
