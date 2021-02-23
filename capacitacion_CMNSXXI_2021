@@ -1,0 +1,5 @@
+#Capacitación módulos variantes
+
+A continucación se encuentran líneas de código útiles
+
+for i in $(ls /home/labseq/SolariaBiodata/testing/reads202012/); do ln -s /home/labseq/SolariaBiodata/testing/reads202012/$i $i; done
