@@ -36,7 +36,7 @@ for i in $(ls | cut -d "_" -f-2 | uniq); do mkdir $i; mv ${i}*gz $i; done
 ```Shell
 ## Llamado de variantes
 
-./llamadorVariantes_HCgvcf.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ "-Xmx4g" /home/umaelab/SolariaBiodata/produccion/hglft_genome_6ffb1_e12b90.bed 16
+./llamadorVariantes_HCgvcf.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ "-Xmx4g" /home/umaelab/SolariaBiodata/produccion/hglft_genome_6ffb1_e12b90.bed
 ./genotipificadorPoblacional_gvcf.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ /home/umaelab/SolariaBiodata/produccion/hglft_genome_6ffb1_e12b90.bed "-Xmx4g"
 
 ## Procesamiento de las variantes
