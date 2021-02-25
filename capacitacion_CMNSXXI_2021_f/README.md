@@ -30,4 +30,21 @@ for i in $(ls | cut -d "_" -f-2 | uniq); do mkdir $i; mv ${i}*gz $i; done
 
 ```
 
+## Sesión 3
+
+
+```Shell
+## Llamado de variantes
+
+./llamadorVariantes_HCgvcf.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ "-Xmx4g" /home/umaelab/SolariaBiodata/produccion/hglft_genome_6ffb1_e12b90.bed 16
+./genotipificadorPoblacional_gvcf.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ /home/umaelab/SolariaBiodata/produccion/hglft_genome_6ffb1_e12b90.bed "-Xmx4g"
+
+## Procesamiento de las variantes
+
+./filtradorVariantes_HF.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/
+./correctorFase.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ 4
+./maestro_varAnot.sh /home/umaelab/SolariaBiodata/testing/t_out/bySAMPLE/ GRCh38.p13.RefSeq
+
+```
+
 Más detalles en  [Solaria Biodata](http://solariabiodata.com.mx).
